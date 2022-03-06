@@ -1,0 +1,23 @@
+type Query {
+    getPlayers: [Player]
+}
+
+type Mutation {
+    addPlayer(name: String, surname: String, position: Position): ID
+    deletePlayer(id: ID): Player
+}
+
+type Player {
+    id: ID!
+    name: String!
+    surname: String!
+    position: Position!
+}
+
+enum Position {
+    PG
+    SG
+    SF
+    PF
+    C
+}
